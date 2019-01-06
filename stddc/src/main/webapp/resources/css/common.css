@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#container {
+	margin 	: 5px;	
+}
+
+#right {
+	display	: inline-block;
+	margin 	: 10px;
+}
+
+#leftMenu {
+	float	: left;
+	margin 	: 10px;
+	width 	: 200px;
+}
+
+#leftMenu .list-group-item:hover {
+	background-color : #337ab7;
+	color : white;
+}
+
+.selected {
+	background-color : #286291;
+	color : white;
+}
+
+#nav {
+	width : 1000px;
+}
+
+.tab-content {
+	width : 100%;
+	border : 1px solid #ddd;
+	border-top : 0;
+	border-radius : 0 0 5px 5px;
+	padding : 10px;
+}
+
+
+#submitBtn {
+	display:block; 
+	margin-left:auto; 
+	margin-right:auto
+}
+
