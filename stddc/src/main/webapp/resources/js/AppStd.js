@@ -119,6 +119,7 @@ function f_submitAppVoca(){
 		url			: "appNewVoca",
 		type		: "POST",
 		data		: $("#appVocaFrm").serialize(),
+		dataType    : "text",
 		success     : function(data){ 
 			alert(data); 
         },

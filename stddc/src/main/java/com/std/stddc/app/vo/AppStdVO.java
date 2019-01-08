@@ -13,6 +13,7 @@ public class AppStdVO implements Serializable{
 	private String vEngShort;		//영문약어명
 	private String vDef;			//정의
 	private String vSource;			//출처
+	private String vAppDt;			//신청일시
 	
 	public String getVoca() {
 		return voca;
@@ -55,5 +56,11 @@ public class AppStdVO implements Serializable{
 	}
 	public void setvSource(String vSource) {
 		this.vSource = vSource;
+	}
+	public String getvAppDt() {
+		return vAppDt;
+	}
+	public void setvAppDt(String vAppDt) {
+		this.vAppDt = vAppDt;
 	}
 }

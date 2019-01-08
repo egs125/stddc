@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.std.stddc.app.svc.AppStdSvc;
 import com.std.stddc.app.vo.AppStdVO;
@@ -52,11 +53,17 @@ public class AppStdCtr {
 	}
 	
 	@RequestMapping("/appNewVoca")
-	public String saveNewVoca(AppStdVO vo) throws Exception {
+	public @ResponseBody String saveNewVoca(AppStdVO vo) throws Exception {
 		
 		String rtn = "";
 		
-		//int result = appStdSvc.saveNewVoca(vo);
+		int result = appStdSvc.saveNewVoca(vo);
+		
+		if(result > 0) {
+			rtn = "Saved!";
+		}else {
+			rtn = "Failed!";
+		}
 		
 		return rtn;
 	}

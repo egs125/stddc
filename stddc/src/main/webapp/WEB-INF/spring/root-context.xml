@@ -6,7 +6,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver"/>
-		<property name="url" value="jdbc:postgresql://118.222.147.102:5432/stddc"/>
+		<property name="url" value="jdbc:postgresql://13.124.124.34:5432/stddc"/>
 		<property name="username" value="root"/>
 		<property name="password" value="Mikion279!"/>
 	</bean>	

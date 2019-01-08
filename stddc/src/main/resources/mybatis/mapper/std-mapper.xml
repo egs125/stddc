@@ -9,8 +9,14 @@
   <mapper namespace="AppStdMapper">
   
   	<resultMap id="app" type="app">
-  		<!-- <id property="id" column="id" />
-		<result property="pw" column="pw" /> -->
+		<result property="voca" 		column="voca"		/>	
+		<result property="vType" 		column="v_type"		/>
+		<result property="vSubst" 		column="v_subst"	/>
+		<result property="vEng" 		column="v_eng"		/>
+		<result property="vEngShort" 	column="v_eng_short"/>
+		<result property="vDef" 		column="v_def"		/>
+		<result property="vSource" 		column="v_source"	/>
+		<result property="vAppDt" 		column="v_app_dt"	/>
   	</resultMap>
 
 
@@ -21,7 +27,19 @@
 	</select>
 	
 	<insert id="saveNewVoca" parameterType="app">
-		
+		/*AppStdDao_saveNewVoca*/
+		INSERT INTO APP_STD_VOCA
+		VALUES
+		(
+			#{voca}
+		   ,#{vType}
+		   ,#{vSubst}
+		   ,#{vEng}
+		   ,#{vEngShort}
+		   ,#{vDef}
+		   ,#{vSource}
+		   ,NOW()
+		)
 	</insert>
 
 
