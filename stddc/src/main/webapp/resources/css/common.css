@@ -37,8 +37,7 @@
 	padding : 10px;
 }
 
-
-#submitBtn {
+.btn {
 	display:block; 
 	margin-left:auto; 
 	margin-right:auto

@@ -5,7 +5,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>표준화 용어 / 단어 / 도메인 신청 화면</title>
+	<title>표준화 용어 / 단어 / 도메인 신청 현황 화면</title>
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -18,7 +18,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<script src="/stddc/resources/js/common.js"></script>
-	<script src="/stddc/resources/js/AppStd.js"></script>
+	<script src="/stddc/resources/js/appList.js"></script>
 	<link rel="stylesheet" href="/stddc/resources/css/common.css">
 
 </head>
@@ -41,7 +41,7 @@
 				
 				<div id="voca" class="content-area">
 					
-					<h4><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> 신규 신청 단어</h4>
+					<h4><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> 신규 신청 단어 목록</h4>
 					
 					<form id="appVocaFrm" class="form-horizontal">
 					
@@ -121,6 +121,8 @@
 						</div>
 						<!-- //end of form-group -->
 						
+						<input type="hidden" id="inputVocaAppStts" name="vAppStts" value="신청"/>
+						 
 						<button id="submitBtn" type="button" class="btn btn-primary btn-lg">단어 신청</button>
 											
 					</form>

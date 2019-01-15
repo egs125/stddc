@@ -25,8 +25,10 @@
 
 	<div id="leftMenu">
 		<ul class="list-group">
-			<li id="app" class="list-group-item">신청현황</li>
-			<li id="rgs" class="list-group-item">등록현황</li>
+			<li id="app" class="list-group-item">신청</li>
+			<li id="appList" class="list-group-item">신청현황</li>
+			<li id="appr" class="list-group-item">승인</li>
+			<li id="rgsList" class="list-group-item">등록현황</li>
 		</ul>
 	</div>
 

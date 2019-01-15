@@ -17,13 +17,16 @@ public class AppStdCtr {
 	@Autowired
 	private AppStdSvc appStdSvc;
 	
+	@RequestMapping("/getAppView")
+	public String getAppView(Model model) {
+		return "app/stdApp";
+	}
+	/*
 	@RequestMapping("/appView")
-	public String getAppView(
-				Model model
-								) {
-		
+	public String getAppView(Model model) {
 		return "app/AppStd";
 	}
+	*/
 	
 	@RequestMapping("/appWord")
 	public ArrayList retrieveAppWord(
@@ -56,7 +59,7 @@ public class AppStdCtr {
 	public @ResponseBody String saveNewVoca(AppStdVO vo) throws Exception {
 		
 		String rtn = "";
-		
+	
 		int result = appStdSvc.saveNewVoca(vo);
 		
 		if(result > 0) {
@@ -66,5 +69,10 @@ public class AppStdCtr {
 		}
 		
 		return rtn;
+	}
+	
+	@RequestMapping("/appListView")
+	public String getAppListView(Model model) {
+		return "app/appList";
 	}
 }

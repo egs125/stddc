@@ -23,7 +23,7 @@ $(function(){
 		$(".form-group").css("border", "none");
 	});
 	
-	$("#submitBtn").on("click", function(){
+	$("#vSubmitBtn").on("click", function(){
 		f_checkForm();
 	});
 });
@@ -31,7 +31,7 @@ $(function(){
 
 function f_setPage(){
 	
-	$("#app").addClass("selected");
+	$("#appList").addClass("selected");
 	f_selectTab("voca");
 	
 	$("#extraDiv").css("display", "none");

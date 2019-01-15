@@ -17,6 +17,7 @@
 		<result property="vDef" 		column="v_def"		/>
 		<result property="vSource" 		column="v_source"	/>
 		<result property="vAppDt" 		column="v_app_dt"	/>
+		<result property="vAppStts" 	column="v_app_stts"	/>
   	</resultMap>
 
 
@@ -39,6 +40,7 @@
 		   ,#{vDef}
 		   ,#{vSource}
 		   ,NOW()
+		   ,#{vAppStts}
 		)
 	</insert>
 
