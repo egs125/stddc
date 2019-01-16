@@ -14,7 +14,7 @@ public class AppStdVO implements Serializable{
 	private String vDef;			//정의
 	private String vSource;			//출처
 	private String vAppDt;			//신청일시
-	private String vAppStts;		//신청상태
+	private String vAppStts;		//단어 신청상태
 	
 	public String getVoca() {
 		return voca;
@@ -70,4 +70,41 @@ public class AppStdVO implements Serializable{
 	public void setvAppStts(String vAppStts) {
 		this.vAppStts = vAppStts;
 	}
+	public String getDomain() {
+		return domain;
+	}
+	public void setDomain(String domain) {
+		this.domain = domain;
+	}
+	public String getDgName() {
+		return dgName;
+	}
+	public void setDgName(String dgName) {
+		this.dgName = dgName;
+	}
+	public String getdType() {
+		return dType;
+	}
+	public void setdType(String dType) {
+		this.dType = dType;
+	}
+	public String getdLength() {
+		return dLength;
+	}
+	public void setdLength(String dLength) {
+		this.dLength = dLength;
+	}
+	public String getdDef() {
+		return dDef;
+	}
+	public void setdDef(String dDef) {
+		this.dDef = dDef;
+	}
+	public String getdAppStts() {
+		return dAppStts;
+	}
+	public void setdAppStts(String dAppStts) {
+		this.dAppStts = dAppStts;
+	}
+
 }

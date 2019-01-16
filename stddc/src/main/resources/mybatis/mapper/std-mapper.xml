@@ -8,7 +8,7 @@
 
   <mapper namespace="AppStdMapper">
   
-  	<resultMap id="app" type="app">
+  	<resultMap id="appVoca" type="appVoca">
 		<result property="voca" 		column="voca"		/>	
 		<result property="vType" 		column="v_type"		/>
 		<result property="vSubst" 		column="v_subst"	/>
@@ -21,13 +21,13 @@
   	</resultMap>
 
 
-	<select id="adminLogin" parameterType="app" resultType="java.lang.String">
+	<select id="adminLogin" parameterType="appVoca" resultType="java.lang.String">
 
 	
 
 	</select>
 	
-	<insert id="saveNewVoca" parameterType="app">
+	<insert id="saveNewVoca" parameterType="appVoca">
 		/*AppStdDao_saveNewVoca*/
 		INSERT INTO APP_STD_VOCA
 		VALUES
@@ -44,6 +44,36 @@
 		)
 	</insert>
 
+	<select id="chkRegVoca" parameterType="java.lang.String" resultType="java.lang.Integer">
+		/*AppStdDao_chkRegVoca*/
+		SELECT COUNT(*)
+		  FROM APP_STD_VOCA
+		 WHERE 1=1
+		   AND "VOCA" = #{voca}
+	</select>
+	
+	<select id="chkRegDomain" parameterType="java.lang.String" resultType="java.lang.Integer">
+		/*AppStdDao_chkRegDomain*/
+		SELECT COUNT(*)
+		  FROM APP_STD_DOMAIN
+		 WHERE 1=1
+		   AND "DOMAIN" = #{domain}
+	</select>
 
+	<insert id="saveNewDomain" parameterType="appDomain">
+		/*AppStdDao_saveNewDomain*/
+		INSERT INTO APP_STD_DOMAIN
+		VALUES
+		(
+			#{domain}
+		   ,#{dgName}
+		   ,#{iName}
+		   ,#{dType}
+		   ,#{dLength}
+		   ,#{dDef}
+		   ,#{dAppStts}
+		   ,NOW()
+		)
+	</insert>
 
   </mapper>

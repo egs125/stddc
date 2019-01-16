@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>
+<% response.setContentType("text/html; charset=UTF-8"); %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -123,7 +125,7 @@
 						
 						<input type="hidden" id="inputVocaAppStts" name="vAppStts" value="신청"/>
 						 
-						<button id="submitBtn" type="button" class="btn btn-primary btn-lg submitBtn">단어 신청</button>
+						<button id="vSubmitBtn" type="button" class="btn btn-primary btn-lg submitBtn">단어 신청</button>
 											
 					</form>
 										
@@ -215,64 +217,46 @@
 						<!-- //end of form-group -->
 												
 						<div id="domainTypeDiv" class="form-group">
-							<label for="inputDomainType" class="col-sm-2 control-label">도메인 타입명</label>
+							<label for="inputDomainType" class="col-sm-2 control-label">도메인 타입</label>
 							<div class="col-sm-10">
-						    	<input type="text" class="form-control" id="inputDomainType" name="dType">
-						      	<small class="text-muted">신청할 도메인의 데이터 타입명을 입력하세요. (ex: NUMBER)</small>
+								<select id="inputDomainType" name="dType">
+									<option value="">선택
+									<option value="VARCHAR">VARCHAR
+									<option value="NUMBER">NUMBER
+									<option value="DATE">DATE
+									<option value="BLOB">BLOB
+									<option value="CLOB">CLOB
+								</select>
+						    	<br>
+						      	<small class="text-muted">신청할 도메인의 데이터 타입을 선택하세요.</small>
 						    </div>
-						</div>
-						<!-- //end of form-group -->
-						
-						<div id="domainTypeDiv" class="form-group">
-							<label for="inputDomainType" class="col-sm-2 control-label">도메인 데이터타입명</label>
-							<div class="col-sm-10">
-						    	<label class="radio-inline">
-									<input type="radio" name="dType" id="dType1" value="VARCHAR"> VARCHAR
-								</label>
-																
-								<label class="radio-inline">
-									<input type="radio" name="dType" id="dType2" value="BLOB"> BLOB
-								</label>
-																
-								<label class="radio-inline">
-									<input type="radio" name="dType" id="dType3" value="CLOB"> CLOB
-								</label>
-																
-								<label class="radio-inline">
-									<input type="radio" name="dType" id="dType4" value="DATE"> DATE
-								</label>
-																
-								<label class="radio-inline">
-									<input type="radio" name="dType" id="dType5" value="NUMBER"> NUMBER
-								</label>
-						    </div>						
 						</div>
 						<!-- //end of form-group -->
 						
 						<div id="domainLengthDiv" class="form-group">
 							<label for="inputDomainLength" class="col-sm-2 control-label">데이터 길이</label>
 							<div class="col-sm-10">
-						    	<input type="text" class="form-control" id="inputDomainLength" name="dominLength">
+						    	<input type="text" class="form-control" id="inputDomainLength" name="dLength">
 						      	<small class="text-muted">신청할 도메인의 데이터 길이를 입력하세요. (ex: 10)</small>
-						    </div>
+						    </div>				
 						</div>
 						<!-- //end of form-group -->
-						
+							
 						<div id="domainDefDiv" class="form-group">
 							<label for="inputDomainDef" class="col-sm-2 control-label">정의</label>
 							<div class="col-sm-10">
-						    	<input type="text" class="form-control" id="inputDomainDef" name="doaminDef">
+						    	<input type="text" class="form-control" id="inputDomainDef" name="dDef">
 						      	<small class="text-muted">신청할 도메인의 정의를 입력하세요. (ex: 평수를 측정하는 수)</small>
 						    </div>
 						</div>
 						<!-- //end of form-group -->
-					
+						
+						<input type="hidden" id="inputDomainAppStts" name="dAppStts" value="신청"/>
+						 
+						<button id="dSubmitBtn" type="button" class="btn btn-primary btn-lg submitBtn">도메인 신청</button>
+						
 					</form>	
 					
-					<input type="hidden" id="inputDomainAppStts" name="dAppStts" value="신청"/>
-						 
-					<button id="dSubmitBtn" type="button" class="btn btn-primary btn-lg submitBtn">도메인 신청</button>
-						
 				</div>
 				<!-- //end of domain -->
 				
