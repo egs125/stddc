@@ -25,12 +25,6 @@ public class AppStdCtr {
 	public String getAppView(Model model) {
 		return "app/stdApp";
 	}
-	/*
-	@RequestMapping("/appView")
-	public String getAppView(Model model) {
-		return "app/AppStd";
-	}
-	*/
 	
 	@RequestMapping("/appWord")
 	public ArrayList retrieveAppWord(
@@ -105,4 +99,5 @@ public class AppStdCtr {
 	public String getAppListView(Model model) {
 		return "app/appList";
 	}
+	
 }

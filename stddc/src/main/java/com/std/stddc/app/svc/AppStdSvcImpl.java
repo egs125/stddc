@@ -50,6 +50,24 @@ public class AppStdSvcImpl implements AppStdSvc {
 
 	@Override
 	public int saveNewDomain(AppStdDomainVO vo) {
+		String dType = vo.getdType();
+		String iName = "";
+		
+		if(dType.equals("VARCHAR")) {
+			dType = "VC";
+		}else if(dType.equals("NUMBER")) {
+			dType = "NM";
+		}else if(dType.equals("DATE")) {
+			dType = "DT";
+		}else if(dType.equals("CLOB")) {
+			dType = "CL";
+		}else if(dType.equals("BLOB")) {
+			dType = "BL";
+		}
+		
+		iName = dType + vo.getdLength();
+		vo.setiName(iName);
+		
 		return appStdDao.saveNewDomain(vo);
 	}
 	

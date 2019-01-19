@@ -131,12 +131,6 @@ function f_checkForm(mode){
 			isValid = false;
 		}
 		
-		if($("#inputDomainGroup").val() == ""){
-			$("#domainGroupDiv").css("border", "1px solid red");
-			chkAlert.push("도메인그룹명");
-			isValid = false;
-		}
-		
 		if($("#inputDomainLength").val() == ""){
 			$("#domainLengthDiv").css("border", "1px solid red");
 			chkAlert.push("데이터길이");
@@ -184,10 +178,18 @@ function f_submitApp(mode){
 	}else if(mode == "word"){
 		
 	}else if(mode == "domain"){
+		var param = {
+				domain  : $("#inputDomainKor").val(),
+				dgName  : $("#inputDomainGroup").val(),
+				dType   : $("#inputDomainType").val(),
+				dLength : $("#inputDomainLength").val(),
+				dDef    : $("#inputDomainDef").val()
+		};
+		
 		$.ajax({	
 			url			: "appNewDomain",
 			type		: "POST",
-			data		: $("#appDomainFrm").serialize(),
+			data		: param,
 			dataType    : "text",
 			success     : function(data){ 
 				alert(data); 
@@ -205,4 +207,25 @@ function f_submitApp(mode){
 
 function f_getAppVocaList(){
 	
+}
+
+function f_clearFrm(mode){
+	
+	if(mode == "voca"){
+		$("#inputVocaKor").val("");
+		$("#vocaType1").prop("checked", true);
+		$("#inputVocaSub").val("");
+		$("#inputVocaEng").val("");
+		$("#inputEngShort").val("");
+		$("#inputVocaDef").val("");
+		$("#inputVocaSource").val("");
+	}else if(mode == "word"){
+		
+	}else if(mode == "domain"){
+		$("#inputDomainKor").val("");
+		$("#inputDomainGroup").val("");
+		$("#inputDomainType").val("").prop("selected", true);
+		$("#inputDomainLength").val("");
+		$("#inputDomainDef").val("");
+	}
 }

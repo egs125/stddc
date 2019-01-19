@@ -60,19 +60,19 @@
 							<label for="inputVocaType" class="col-sm-2 control-label">단어유형</label>
 							<div class="col-sm-10">
 						    	<label class="radio-inline">
-									<input type="radio" name="vType" id="vocaType1" value="std"> 표준어
+									<input type="radio" name="vType" id="vocaType1" value="표준어"> 표준어
 								</label>
 																
 								<label class="radio-inline">
-									<input type="radio" name="vType" id="vocaType2" value="dmn"> 분류어
+									<input type="radio" name="vType" id="vocaType2" value="분류어"> 분류어
 								</label>
 								
 								<label class="radio-inline">
-									<input type="radio" name="vType" id="vocaType3" value="snn"> 동의어
+									<input type="radio" name="vType" id="vocaType3" value="동의어"> 동의어
 								</label>	
 								 
 								<label class="radio-inline">
-									<input type="radio" name="vType" id="vocaType4" value="fbd"> 금칙어
+									<input type="radio" name="vType" id="vocaType4" value="금칙어"> 금칙어
 								</label>
 						    </div>						
 						</div>
